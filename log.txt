@@ -1,0 +1,448 @@
+2018-12-17 08:31:28,747 main.py[line: 14] INFO: sion::当前运行路径：/home/fengguo/PycharmProjects/autoplatform_dev
+2018-12-17 08:31:29,362 global_var.py[line: 16] INFO: sion::当前运行路径：/home/fengguo/PycharmProjects/autoplatform_dev/globalpkg
+2018-12-17 08:31:29,362 global_var.py[line: 24] INFO: 当前运行环境：测试环境
+2018-12-17 08:31:29,362 global_var.py[line: 25] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 08:31:29,446 global_var.py[line: 34] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 08:31:29,461 global_var.py[line: 37] INFO: 正在获取testlink
+2018-12-17 08:31:29,976 main.py[line: 67] INFO: 正在创建测试用例报告报表
+2018-12-17 08:31:29,976 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS testcase_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testsuit varchar(40),                                          testplan varchar(40),                                          project varchar(40),                                          runresult varchar(20),                                          runtime datetime)
+2018-12-17 08:31:30,004 main.py[line: 70] INFO: 正在创建测试步骤报告报表
+2018-12-17 08:31:30,004 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS case_step_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testplan varchar(40) NOT NULL,                                          project varchar(40) NOT NULL,                                          step_id int,                                          step_num int NOT NULL,                                          step_action varchar(1000),                                           expected_results varchar(1000),                                          runresult varchar(10),                                          reason varchar(2000),                                          protocol_method varchar(40) ,                                          protocol varchar(40),                                          host varchar(40),                                          port int,                                          runtime datetime)
+2018-12-17 08:31:30,005 main.py[line: 72] INFO: sys.path: ['/home/fengguo/PycharmProjects/autoplatform_dev', '/home/fengguo/PycharmProjects/autoplatform_dev', '/usr/local/lib/python36.zip', '/usr/local/lib/python3.6', '/usr/local/lib/python3.6/lib-dynload', '/home/fengguo/.local/lib/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages']
+2018-12-17 08:31:30,005 main.py[line: 73] INFO: 正在读取运行模式配置
+2018-12-17 08:31:30,016 main.py[line: 80] INFO: 正在运行全局初始化用例……
+2018-12-17 08:31:30,016 main.py[line: 82] INFO: 待运行全局初始化用例id列表：[]
+2018-12-17 08:31:30,016 main.py[line: 88] INFO: 按项目运行测试
+2018-12-17 08:31:30,016 main.py[line: 125] INFO: 运行指定项目
+2018-12-17 08:31:30,700 main.py[line: 141] INFO: 正在读取测项目[id：1, project：LGEOC]的协议，host，端口配置...
+2018-12-17 08:31:30,700 main.py[line: 144] INFO: 成功读取配置信息：{"protocol":"http","host":"192.168.202.112/sso","port":"80"}
+2018-12-17 08:31:30,703 main.py[line: 160] INFO: 正在执行测试项目[id：1, project：LGEOC]
+2018-12-17 08:31:30,703 testproject.py[line: 23] INFO: 正在获取测试项目[id：1, name：LGEOC]对应对应的测试计划名称列表
+2018-12-17 08:31:31,202 testproject.py[line: 28] INFO: 成功获取项目测试计划名称列表[list=['111']]
+2018-12-17 08:31:31,344 testproject.py[line: 38] INFO: 正在执行项目测试计划[project：LGEOC，testplan：111]
+2018-12-17 08:31:31,345 testplan.py[line: 29] INFO: 正在获取测试计划[project=LGEOC，name=111]的测试用例
+2018-12-17 08:31:31,778 testplan.py[line: 35] INFO: 成功获取测试计划[project=LGEOC，name=111]的测试用例id：dict_keys(['4'])
+2018-12-17 08:31:31,915 testplan.py[line: 44] INFO: 获取测试用例信息 [{'updater_login': 'admin', 'author_login': 'sunwei', 'name': 'test1', 'node_order': '1000', 'testsuite_id': '3', 'testcase_id': '4', 'id': '5', 'tc_external_id': '1', 'version': '1', 'layout': '1', 'status': '1', 'summary': '<p>test_Login*.py</p>\n', 'preconditions': '', 'importance': '2', 'author_id': '3', 'creation_ts': '2018-07-03 05:31:15', 'updater_id': '1', 'modification_ts': '2018-10-10 10:21:05', 'active': '1', 'is_open': '1', 'execution_type': '1', 'estimated_exec_duration': '', 'author_first_name': 'wei', 'author_last_name': 'sun', 'updater_first_name': 'Testlink', 'updater_last_name': 'Administrator', 'steps': [{'id': '6', 'step_number': '1', 'actions': '<p>{</p>\n\n<p>&quot;111&quot;:&quot;test&quot;</p>\n\n<p>}</p>\n', 'expected_results': '', 'active': '1', 'execution_type': '1'}], 'full_tc_external_id': 'LGEOC-1'}]
+2018-12-17 08:31:31,915 testplan.py[line: 52] INFO: test case summary: test_Login*.py
+2018-12-17 08:31:32,022 testplan.py[line: 72] INFO: 记录测试用例到测试用例报表
+2018-12-17 08:31:32,023 mydb.py[line: 57] INFO: query：INSERT INTO testcase_report_tb(executed_history_id, testcase_id, testcase_name, testsuit, testplan, project, runresult, runtime) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)  data：('20181217083129', 4, 'test1', 'testSuite', '111', 'LGEOC', 'Block', '2018/07/08 08:00:00')
+2018-12-17 08:31:32,033 testplan.py[line: 75] INFO: 开始执行测试用例[id=4，name=test1]
+2018-12-17 08:31:32,033 testcase.py[line: 37] INFO: sion:Will find test cases: test_Login*.py
+2018-12-17 08:31:32,035 testcase.py[line: 41] INFO: sion:discover testcases number:::3
+2018-12-17 08:31:32,035 testcase.py[line: 45] INFO: sion:steps
+2018-12-17 08:31:32,035 testcase.py[line: 46] INFO: sion:start selenium test cases
+2018-12-17 08:31:32,040 testcase.py[line: 49] INFO: start BSTestRunner
+2018-12-17 08:32:30,093 testplan.py[line: 80] INFO: 正在更新用例执行结果
+2018-12-17 08:32:30,958 testplan.py[line: 100] INFO: 测试计划[project=LGEOC ,testplan=111]已执行完
+2018-12-17 08:32:31,290 main.py[line: 131] ERROR: 测试项目[project：pj_pos]获取失败，暂时无法执行：7011: Test Project (name:pj_pos) does not exist.
+getTestProjectByName({'devKey': '0b839ca6b6a4d8b78139e5f5f93c38f1', 'testprojectname': 'pj_pos'})
+2018-12-17 08:32:31,290 main.py[line: 253] INFO: 接口测试已执行完成，正在关闭数据库连接
+2018-12-17 08:32:31,295 htmlreporter.py[line: 37] INFO: 正在查询测试用例总数
+2018-12-17 08:32:31,295 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE executed_history_id = %s  data：('20181217083129',)
+2018-12-17 08:32:31,307 htmlreporter.py[line: 43] INFO: 正在查询执行通过的用例数
+2018-12-17 08:32:31,307 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Pass', '20181217083129')
+2018-12-17 08:32:31,308 htmlreporter.py[line: 49] INFO: 正在查询执行失败的用例数
+2018-12-17 08:32:31,308 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Fail', '20181217083129')
+2018-12-17 08:32:31,308 htmlreporter.py[line: 55] INFO: 正在查询执行出错的用例数
+2018-12-17 08:32:31,308 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Error', '20181217083129')
+2018-12-17 08:32:31,309 htmlreporter.py[line: 61] INFO: 正在查询未执行的用例数
+2018-12-17 08:32:31,309 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Block', '20181217083129')
+2018-12-17 08:32:31,309 htmlreporter.py[line: 87] INFO: 正在查询已运的测试计划
+2018-12-17 08:32:31,309 mydb.py[line: 104] INFO: query：SELECT project, testplan FROM testcase_report_tb WHERE executed_history_id = %s GROUP BY project, testplan ORDER BY id ASC  data：('20181217083129',)
+2018-12-17 08:32:31,338 htmlreporter.py[line: 113] INFO: 正在查询测试计划[project：LGEOC, testplan：111]的测试用例执行结果
+2018-12-17 08:32:31,338 mydb.py[line: 104] INFO: query：SELECT id, executed_history_id, testcase_id, testcase_name,testsuit, testplan, project, runresult, runtime FROM testcase_report_tb WHERE project=%s AND testplan=%s AND executed_history_id = %s GROUP BY testcase_id ORDER BY id ASC  data：('LGEOC', '111', '20181217083129')
+2018-12-17 08:32:31,343 htmlreporter.py[line: 120] INFO: 正在记录测试测试计划[project：LGEOC, testplan：111]的测试用例运行结果到测试报告
+2018-12-17 08:32:31,343 htmlreporter.py[line: 134] INFO: 正在查询已运的测试计划
+2018-12-17 08:32:31,343 mydb.py[line: 104] INFO: query：SELECT project, testplan FROM testcase_report_tb WHERE executed_history_id = %s GROUP BY project, testplan ORDER BY id ASC  data：('20181217083129',)
+2018-12-17 08:32:31,344 htmlreporter.py[line: 146] INFO: 正在查询测试计划[project：LGEOC, testplan：111]已运行的测试用例
+2018-12-17 08:32:31,344 mydb.py[line: 104] INFO: query：SELECT testcase_id, testcase_name, project, testplan FROM testcase_report_tb WHERE project=%s AND testplan=%s AND executed_history_id = %s  GROUP BY testcase_id ORDER BY id ASC  data：('LGEOC', '111', '20181217083129')
+2018-12-17 08:32:31,345 htmlreporter.py[line: 177] INFO: 正在查询测试用例[id=4]步骤运行结果
+2018-12-17 08:32:31,345 mydb.py[line: 104] INFO: query：SELECT step_id, step_num, protocol_method, protocol, HOST, PORT, step_action, expected_results, runresult, reason, runtime FROM case_step_report_tb WHERE project= %s AND testplan= %s AND testcase_id = %s AND executed_history_id = %s GROUP BY step_num ORDER BY step_num ASC  data：('LGEOC', '111', 4, '20181217083129')
+2018-12-17 08:32:31,359 htmlreporter.py[line: 199] INFO: 正在设置测试报告结果文件名
+2018-12-17 08:32:31,359 htmlreporter.py[line: 209] INFO: 测试报告文件名所在路径为：./test_report20181217083129.html
+2018-12-17 08:32:31,359 htmlreporter.py[line: 202] INFO: 正在生成测试报告
+2018-12-17 08:32:31,381 main.py[line: 278] INFO: 生成测试报告成功
+2018-12-17 08:45:57,158 main.py[line: 14] INFO: sion::当前运行路径：/home/fengguo/PycharmProjects/autoplatform_dev
+2018-12-17 08:45:57,722 global_var.py[line: 16] INFO: sion::当前运行路径：/home/fengguo/PycharmProjects/autoplatform_dev/globalpkg
+2018-12-17 08:45:57,722 global_var.py[line: 24] INFO: 当前运行环境：测试环境
+2018-12-17 08:45:57,722 global_var.py[line: 25] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 08:45:57,790 global_var.py[line: 34] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 08:45:57,791 global_var.py[line: 37] INFO: 正在获取testlink
+2018-12-17 08:45:57,792 global_var.py[line: 42] INFO: sion::platform dir /home/fengguo/PycharmProjects/autoplatform_dev/globalpkg
+2018-12-17 08:45:58,222 main.py[line: 67] INFO: 正在创建测试用例报告报表
+2018-12-17 08:45:58,223 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS testcase_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testsuit varchar(40),                                          testplan varchar(40),                                          project varchar(40),                                          runresult varchar(20),                                          runtime datetime)
+2018-12-17 08:45:58,223 main.py[line: 70] INFO: 正在创建测试步骤报告报表
+2018-12-17 08:45:58,224 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS case_step_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testplan varchar(40) NOT NULL,                                          project varchar(40) NOT NULL,                                          step_id int,                                          step_num int NOT NULL,                                          step_action varchar(1000),                                           expected_results varchar(1000),                                          runresult varchar(10),                                          reason varchar(2000),                                          protocol_method varchar(40) ,                                          protocol varchar(40),                                          host varchar(40),                                          port int,                                          runtime datetime)
+2018-12-17 08:45:58,224 main.py[line: 72] INFO: sys.path: ['/home/fengguo/PycharmProjects/autoplatform_dev', '/home/fengguo/PycharmProjects/autoplatform_dev', '/usr/local/lib/python36.zip', '/usr/local/lib/python3.6', '/usr/local/lib/python3.6/lib-dynload', '/home/fengguo/.local/lib/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages']
+2018-12-17 08:45:58,224 main.py[line: 73] INFO: 正在读取运行模式配置
+2018-12-17 08:45:58,232 main.py[line: 80] INFO: 正在运行全局初始化用例……
+2018-12-17 08:45:58,232 main.py[line: 82] INFO: 待运行全局初始化用例id列表：[]
+2018-12-17 08:45:58,232 main.py[line: 88] INFO: 按项目运行测试
+2018-12-17 08:45:58,232 main.py[line: 125] INFO: 运行指定项目
+2018-12-17 08:45:58,545 main.py[line: 141] INFO: 正在读取测项目[id：1, project：LGEOC]的协议，host，端口配置...
+2018-12-17 08:45:58,546 main.py[line: 144] INFO: 成功读取配置信息：{"protocol":"http","host":"192.168.202.112/sso","port":"80"}
+2018-12-17 08:45:58,548 main.py[line: 160] INFO: 正在执行测试项目[id：1, project：LGEOC]
+2018-12-17 08:45:58,548 testproject.py[line: 23] INFO: 正在获取测试项目[id：1, name：LGEOC]对应对应的测试计划名称列表
+2018-12-17 08:45:58,914 testproject.py[line: 28] INFO: 成功获取项目测试计划名称列表[list=['111']]
+2018-12-17 08:45:59,021 testproject.py[line: 38] INFO: 正在执行项目测试计划[project：LGEOC，testplan：111]
+2018-12-17 08:45:59,021 testplan.py[line: 29] INFO: 正在获取测试计划[project=LGEOC，name=111]的测试用例
+2018-12-17 08:45:59,182 testplan.py[line: 35] INFO: 成功获取测试计划[project=LGEOC，name=111]的测试用例id：dict_keys(['4'])
+2018-12-17 08:45:59,290 testplan.py[line: 44] INFO: 获取测试用例信息 [{'updater_login': 'admin', 'author_login': 'sunwei', 'name': 'test1', 'node_order': '1000', 'testsuite_id': '3', 'testcase_id': '4', 'id': '5', 'tc_external_id': '1', 'version': '1', 'layout': '1', 'status': '1', 'summary': '<p>test_Login*.py</p>\n', 'preconditions': '', 'importance': '2', 'author_id': '3', 'creation_ts': '2018-07-03 05:31:15', 'updater_id': '1', 'modification_ts': '2018-10-10 10:21:05', 'active': '1', 'is_open': '1', 'execution_type': '1', 'estimated_exec_duration': '', 'author_first_name': 'wei', 'author_last_name': 'sun', 'updater_first_name': 'Testlink', 'updater_last_name': 'Administrator', 'steps': [{'id': '6', 'step_number': '1', 'actions': '<p>{</p>\n\n<p>&quot;111&quot;:&quot;test&quot;</p>\n\n<p>}</p>\n', 'expected_results': '', 'active': '1', 'execution_type': '1'}], 'full_tc_external_id': 'LGEOC-1'}]
+2018-12-17 08:45:59,290 testplan.py[line: 52] INFO: test case summary: test_Login*.py
+2018-12-17 08:45:59,400 testplan.py[line: 72] INFO: 记录测试用例到测试用例报表
+2018-12-17 08:45:59,400 mydb.py[line: 57] INFO: query：INSERT INTO testcase_report_tb(executed_history_id, testcase_id, testcase_name, testsuit, testplan, project, runresult, runtime) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)  data：('20181217084557', 4, 'test1', 'testSuite', '111', 'LGEOC', 'Block', '2018/07/08 08:00:00')
+2018-12-17 08:45:59,412 testplan.py[line: 75] INFO: 开始执行测试用例[id=4，name=test1]
+2018-12-17 08:45:59,412 testcase.py[line: 37] INFO: sion:Will find test cases: test_Login*.py
+2018-12-17 08:45:59,414 testcase.py[line: 41] INFO: sion:discover testcases number:::3
+2018-12-17 08:45:59,414 testcase.py[line: 45] INFO: sion:steps
+2018-12-17 08:45:59,414 testcase.py[line: 46] INFO: sion:start selenium test cases
+2018-12-17 08:45:59,414 testcase.py[line: 49] INFO: start BSTestRunner
+2018-12-17 08:46:23,968 testplan.py[line: 80] INFO: 正在更新用例执行结果
+2018-12-17 08:46:24,592 testplan.py[line: 100] INFO: 测试计划[project=LGEOC ,testplan=111]已执行完
+2018-12-17 08:46:24,744 main.py[line: 131] ERROR: 测试项目[project：pj_pos]获取失败，暂时无法执行：7011: Test Project (name:pj_pos) does not exist.
+getTestProjectByName({'devKey': '0b839ca6b6a4d8b78139e5f5f93c38f1', 'testprojectname': 'pj_pos'})
+2018-12-17 08:46:24,744 main.py[line: 253] INFO: 接口测试已执行完成，正在关闭数据库连接
+2018-12-17 08:46:24,748 htmlreporter.py[line: 37] INFO: 正在查询测试用例总数
+2018-12-17 08:46:24,748 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE executed_history_id = %s  data：('20181217084557',)
+2018-12-17 08:46:24,763 htmlreporter.py[line: 43] INFO: 正在查询执行通过的用例数
+2018-12-17 08:46:24,763 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Pass', '20181217084557')
+2018-12-17 08:46:24,763 htmlreporter.py[line: 49] INFO: 正在查询执行失败的用例数
+2018-12-17 08:46:24,763 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Fail', '20181217084557')
+2018-12-17 08:46:24,764 htmlreporter.py[line: 55] INFO: 正在查询执行出错的用例数
+2018-12-17 08:46:24,764 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Error', '20181217084557')
+2018-12-17 08:46:24,764 htmlreporter.py[line: 61] INFO: 正在查询未执行的用例数
+2018-12-17 08:46:24,764 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Block', '20181217084557')
+2018-12-17 08:46:24,765 htmlreporter.py[line: 87] INFO: 正在查询已运的测试计划
+2018-12-17 08:46:24,765 mydb.py[line: 104] INFO: query：SELECT project, testplan FROM testcase_report_tb WHERE executed_history_id = %s GROUP BY project, testplan ORDER BY id ASC  data：('20181217084557',)
+2018-12-17 08:46:24,766 htmlreporter.py[line: 113] INFO: 正在查询测试计划[project：LGEOC, testplan：111]的测试用例执行结果
+2018-12-17 08:46:24,766 mydb.py[line: 104] INFO: query：SELECT id, executed_history_id, testcase_id, testcase_name,testsuit, testplan, project, runresult, runtime FROM testcase_report_tb WHERE project=%s AND testplan=%s AND executed_history_id = %s GROUP BY testcase_id ORDER BY id ASC  data：('LGEOC', '111', '20181217084557')
+2018-12-17 08:46:24,767 htmlreporter.py[line: 120] INFO: 正在记录测试测试计划[project：LGEOC, testplan：111]的测试用例运行结果到测试报告
+2018-12-17 08:46:24,767 htmlreporter.py[line: 134] INFO: 正在查询已运的测试计划
+2018-12-17 08:46:24,767 mydb.py[line: 104] INFO: query：SELECT project, testplan FROM testcase_report_tb WHERE executed_history_id = %s GROUP BY project, testplan ORDER BY id ASC  data：('20181217084557',)
+2018-12-17 08:46:24,768 htmlreporter.py[line: 146] INFO: 正在查询测试计划[project：LGEOC, testplan：111]已运行的测试用例
+2018-12-17 08:46:24,768 mydb.py[line: 104] INFO: query：SELECT testcase_id, testcase_name, project, testplan FROM testcase_report_tb WHERE project=%s AND testplan=%s AND executed_history_id = %s  GROUP BY testcase_id ORDER BY id ASC  data：('LGEOC', '111', '20181217084557')
+2018-12-17 08:46:24,769 htmlreporter.py[line: 177] INFO: 正在查询测试用例[id=4]步骤运行结果
+2018-12-17 08:46:24,769 mydb.py[line: 104] INFO: query：SELECT step_id, step_num, protocol_method, protocol, HOST, PORT, step_action, expected_results, runresult, reason, runtime FROM case_step_report_tb WHERE project= %s AND testplan= %s AND testcase_id = %s AND executed_history_id = %s GROUP BY step_num ORDER BY step_num ASC  data：('LGEOC', '111', 4, '20181217084557')
+2018-12-17 08:46:24,770 htmlreporter.py[line: 199] INFO: 正在设置测试报告结果文件名
+2018-12-17 08:46:24,770 htmlreporter.py[line: 209] INFO: 测试报告文件名所在路径为：./test_report20181217084557.html
+2018-12-17 08:46:24,770 htmlreporter.py[line: 202] INFO: 正在生成测试报告
+2018-12-17 08:46:24,811 main.py[line: 278] INFO: 生成测试报告成功
+2018-12-17 08:54:29,266 main.py[line: 14] INFO: sion::当前运行路径：/home/fengguo/PycharmProjects/autoplatform_dev
+2018-12-17 08:54:29,591 main.py[line: 14] INFO: sion::当前运行路径：/home/fengguo/PycharmProjects/autoplatform_dev
+2018-12-17 08:54:29,798 global_var.py[line: 16] INFO: sion::当前运行路径：/home/fengguo/PycharmProjects/autoplatform_dev/globalpkg
+2018-12-17 08:54:29,798 global_var.py[line: 24] INFO: 当前运行环境：测试环境
+2018-12-17 08:54:29,798 global_var.py[line: 25] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 08:54:29,822 global_var.py[line: 16] INFO: sion::当前运行路径：/home/fengguo/PycharmProjects/autoplatform_dev/globalpkg
+2018-12-17 08:54:29,822 global_var.py[line: 24] INFO: 当前运行环境：测试环境
+2018-12-17 08:54:29,822 global_var.py[line: 25] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 08:54:29,898 global_var.py[line: 34] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 08:54:29,900 global_var.py[line: 34] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 08:54:29,910 global_var.py[line: 37] INFO: 正在获取testlink
+2018-12-17 08:54:29,911 global_var.py[line: 42] INFO: sion::platform dir /home/fengguo/PycharmProjects/autoplatform_dev
+2018-12-17 08:54:29,917 global_var.py[line: 37] INFO: 正在获取testlink
+2018-12-17 08:54:29,920 global_var.py[line: 42] INFO: sion::platform dir /home/fengguo/PycharmProjects/autoplatform_dev
+2018-12-17 08:54:30,562 main.py[line: 67] INFO: 正在创建测试用例报告报表
+2018-12-17 08:54:30,562 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS testcase_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testsuit varchar(40),                                          testplan varchar(40),                                          project varchar(40),                                          runresult varchar(20),                                          runtime datetime)
+2018-12-17 08:54:30,563 main.py[line: 67] INFO: 正在创建测试用例报告报表
+2018-12-17 08:54:30,563 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS testcase_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testsuit varchar(40),                                          testplan varchar(40),                                          project varchar(40),                                          runresult varchar(20),                                          runtime datetime)
+2018-12-17 08:54:30,565 main.py[line: 70] INFO: 正在创建测试步骤报告报表
+2018-12-17 08:54:30,566 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS case_step_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testplan varchar(40) NOT NULL,                                          project varchar(40) NOT NULL,                                          step_id int,                                          step_num int NOT NULL,                                          step_action varchar(1000),                                           expected_results varchar(1000),                                          runresult varchar(10),                                          reason varchar(2000),                                          protocol_method varchar(40) ,                                          protocol varchar(40),                                          host varchar(40),                                          port int,                                          runtime datetime)
+2018-12-17 08:54:30,577 main.py[line: 72] INFO: sys.path: ['/home/fengguo/PycharmProjects/autoplatform_dev', '/home/fengguo/PycharmProjects/autoplatform_dev', '/usr/local/lib/python36.zip', '/usr/local/lib/python3.6', '/usr/local/lib/python3.6/lib-dynload', '/home/fengguo/.local/lib/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages']
+2018-12-17 08:54:30,577 main.py[line: 73] INFO: 正在读取运行模式配置
+2018-12-17 08:54:30,578 main.py[line: 70] INFO: 正在创建测试步骤报告报表
+2018-12-17 08:54:30,579 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS case_step_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testplan varchar(40) NOT NULL,                                          project varchar(40) NOT NULL,                                          step_id int,                                          step_num int NOT NULL,                                          step_action varchar(1000),                                           expected_results varchar(1000),                                          runresult varchar(10),                                          reason varchar(2000),                                          protocol_method varchar(40) ,                                          protocol varchar(40),                                          host varchar(40),                                          port int,                                          runtime datetime)
+2018-12-17 08:54:30,579 main.py[line: 72] INFO: sys.path: ['/home/fengguo/PycharmProjects/autoplatform_dev', '/opt/pycharm-community-2018.1.1/helpers/pydev', '/home/fengguo/PycharmProjects/autoplatform_dev', '/opt/pycharm-community-2018.1.1/helpers/pydev', '/home/fengguo/.PyCharmCE2018.1/system/cythonExtensions', '/usr/local/lib/python36.zip', '/usr/local/lib/python3.6', '/usr/local/lib/python3.6/lib-dynload', '/home/fengguo/.local/lib/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages']
+2018-12-17 08:54:30,580 main.py[line: 73] INFO: 正在读取运行模式配置
+2018-12-17 08:54:30,584 main.py[line: 80] INFO: 正在运行全局初始化用例……
+2018-12-17 08:54:30,584 main.py[line: 82] INFO: 待运行全局初始化用例id列表：[]
+2018-12-17 08:54:30,584 main.py[line: 88] INFO: 按项目运行测试
+2018-12-17 08:54:30,584 main.py[line: 125] INFO: 运行指定项目
+2018-12-17 08:54:30,586 main.py[line: 80] INFO: 正在运行全局初始化用例……
+2018-12-17 08:54:30,586 main.py[line: 82] INFO: 待运行全局初始化用例id列表：[]
+2018-12-17 08:54:30,587 main.py[line: 88] INFO: 按项目运行测试
+2018-12-17 08:54:30,588 main.py[line: 125] INFO: 运行指定项目
+2018-12-17 08:54:30,842 main.py[line: 141] INFO: 正在读取测项目[id：1, project：LGEOC]的协议，host，端口配置...
+2018-12-17 08:54:30,843 main.py[line: 144] INFO: 成功读取配置信息：{"protocol":"http","host":"192.168.202.112/sso","port":"80"}
+2018-12-17 08:54:30,849 main.py[line: 160] INFO: 正在执行测试项目[id：1, project：LGEOC]
+2018-12-17 08:54:30,849 testproject.py[line: 23] INFO: 正在获取测试项目[id：1, name：LGEOC]对应对应的测试计划名称列表
+2018-12-17 08:54:30,866 main.py[line: 141] INFO: 正在读取测项目[id：1, project：LGEOC]的协议，host，端口配置...
+2018-12-17 08:54:30,866 main.py[line: 144] INFO: 成功读取配置信息：{"protocol":"http","host":"192.168.202.112/sso","port":"80"}
+2018-12-17 08:54:30,868 main.py[line: 160] INFO: 正在执行测试项目[id：1, project：LGEOC]
+2018-12-17 08:54:30,868 testproject.py[line: 23] INFO: 正在获取测试项目[id：1, name：LGEOC]对应对应的测试计划名称列表
+2018-12-17 08:54:30,980 testproject.py[line: 28] INFO: 成功获取项目测试计划名称列表[list=['111']]
+2018-12-17 08:54:31,010 testproject.py[line: 28] INFO: 成功获取项目测试计划名称列表[list=['111']]
+2018-12-17 08:54:31,079 testproject.py[line: 38] INFO: 正在执行项目测试计划[project：LGEOC，testplan：111]
+2018-12-17 08:54:31,079 testplan.py[line: 29] INFO: 正在获取测试计划[project=LGEOC，name=111]的测试用例
+2018-12-17 08:54:31,138 testproject.py[line: 38] INFO: 正在执行项目测试计划[project：LGEOC，testplan：111]
+2018-12-17 08:54:31,139 testplan.py[line: 29] INFO: 正在获取测试计划[project=LGEOC，name=111]的测试用例
+2018-12-17 08:54:31,205 testplan.py[line: 35] INFO: 成功获取测试计划[project=LGEOC，name=111]的测试用例id：dict_keys(['4'])
+2018-12-17 08:54:31,264 testplan.py[line: 35] INFO: 成功获取测试计划[project=LGEOC，name=111]的测试用例id：dict_keys(['4'])
+2018-12-17 08:54:31,311 testplan.py[line: 44] INFO: 获取测试用例信息 [{'updater_login': 'admin', 'author_login': 'sunwei', 'name': 'test1', 'node_order': '1000', 'testsuite_id': '3', 'testcase_id': '4', 'id': '5', 'tc_external_id': '1', 'version': '1', 'layout': '1', 'status': '1', 'summary': '<p>test_Login*.py</p>\n', 'preconditions': '', 'importance': '2', 'author_id': '3', 'creation_ts': '2018-07-03 05:31:15', 'updater_id': '1', 'modification_ts': '2018-10-10 10:21:05', 'active': '1', 'is_open': '1', 'execution_type': '1', 'estimated_exec_duration': '', 'author_first_name': 'wei', 'author_last_name': 'sun', 'updater_first_name': 'Testlink', 'updater_last_name': 'Administrator', 'steps': [{'id': '6', 'step_number': '1', 'actions': '<p>{</p>\n\n<p>&quot;111&quot;:&quot;test&quot;</p>\n\n<p>}</p>\n', 'expected_results': '', 'active': '1', 'execution_type': '1'}], 'full_tc_external_id': 'LGEOC-1'}]
+2018-12-17 08:54:31,312 testplan.py[line: 52] INFO: test case summary: test_Login*.py
+2018-12-17 08:54:31,379 testplan.py[line: 44] INFO: 获取测试用例信息 [{'updater_login': 'admin', 'author_login': 'sunwei', 'name': 'test1', 'node_order': '1000', 'testsuite_id': '3', 'testcase_id': '4', 'id': '5', 'tc_external_id': '1', 'version': '1', 'layout': '1', 'status': '1', 'summary': '<p>test_Login*.py</p>\n', 'preconditions': '', 'importance': '2', 'author_id': '3', 'creation_ts': '2018-07-03 05:31:15', 'updater_id': '1', 'modification_ts': '2018-10-10 10:21:05', 'active': '1', 'is_open': '1', 'execution_type': '1', 'estimated_exec_duration': '', 'author_first_name': 'wei', 'author_last_name': 'sun', 'updater_first_name': 'Testlink', 'updater_last_name': 'Administrator', 'steps': [{'id': '6', 'step_number': '1', 'actions': '<p>{</p>\n\n<p>&quot;111&quot;:&quot;test&quot;</p>\n\n<p>}</p>\n', 'expected_results': '', 'active': '1', 'execution_type': '1'}], 'full_tc_external_id': 'LGEOC-1'}]
+2018-12-17 08:54:31,379 testplan.py[line: 52] INFO: test case summary: test_Login*.py
+2018-12-17 08:54:31,480 testplan.py[line: 72] INFO: 记录测试用例到测试用例报表
+2018-12-17 08:54:31,480 mydb.py[line: 57] INFO: query：INSERT INTO testcase_report_tb(executed_history_id, testcase_id, testcase_name, testsuit, testplan, project, runresult, runtime) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)  data：('20181217085429', 4, 'test1', 'testSuite', '111', 'LGEOC', 'Block', '2018/07/08 08:00:00')
+2018-12-17 08:54:31,507 testplan.py[line: 75] INFO: 开始执行测试用例[id=4，name=test1]
+2018-12-17 08:54:31,508 testcase.py[line: 37] INFO: sion:Will find test cases: test_Login*.py
+2018-12-17 08:54:31,509 testcase.py[line: 41] INFO: sion:discover testcases number:::3
+2018-12-17 08:54:31,509 testcase.py[line: 45] INFO: sion:steps
+2018-12-17 08:54:31,509 testcase.py[line: 46] INFO: sion:start selenium test cases
+2018-12-17 08:54:31,509 testcase.py[line: 49] INFO: start BSTestRunner
+2018-12-17 08:54:31,538 testplan.py[line: 72] INFO: 记录测试用例到测试用例报表
+2018-12-17 08:54:31,538 mydb.py[line: 57] INFO: query：INSERT INTO testcase_report_tb(executed_history_id, testcase_id, testcase_name, testsuit, testplan, project, runresult, runtime) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)  data：('20181217085429', 4, 'test1', 'testSuite', '111', 'LGEOC', 'Block', '2018/07/08 08:00:00')
+2018-12-17 08:54:31,539 testplan.py[line: 75] INFO: 开始执行测试用例[id=4，name=test1]
+2018-12-17 08:54:31,540 testcase.py[line: 37] INFO: sion:Will find test cases: test_Login*.py
+2018-12-17 08:54:31,543 testcase.py[line: 41] INFO: sion:discover testcases number:::3
+2018-12-17 08:54:31,543 testcase.py[line: 45] INFO: sion:steps
+2018-12-17 08:54:31,544 testcase.py[line: 46] INFO: sion:start selenium test cases
+2018-12-17 08:54:31,544 testcase.py[line: 49] INFO: start BSTestRunner
+2018-12-17 08:55:32,216 testplan.py[line: 80] INFO: 正在更新用例执行结果
+2018-12-17 08:55:32,257 testplan.py[line: 80] INFO: 正在更新用例执行结果
+2018-12-17 08:55:33,399 testplan.py[line: 100] INFO: 测试计划[project=LGEOC ,testplan=111]已执行完
+2018-12-17 08:55:33,401 testplan.py[line: 100] INFO: 测试计划[project=LGEOC ,testplan=111]已执行完
+2018-12-17 08:55:33,613 main.py[line: 131] ERROR: 测试项目[project：pj_pos]获取失败，暂时无法执行：7011: Test Project (name:pj_pos) does not exist.
+getTestProjectByName({'devKey': '0b839ca6b6a4d8b78139e5f5f93c38f1', 'testprojectname': 'pj_pos'})
+2018-12-17 08:55:33,613 main.py[line: 253] INFO: 接口测试已执行完成，正在关闭数据库连接
+2018-12-17 08:55:33,619 main.py[line: 131] ERROR: 测试项目[project：pj_pos]获取失败，暂时无法执行：7011: Test Project (name:pj_pos) does not exist.
+getTestProjectByName({'devKey': '0b839ca6b6a4d8b78139e5f5f93c38f1', 'testprojectname': 'pj_pos'})
+2018-12-17 08:55:33,619 main.py[line: 253] INFO: 接口测试已执行完成，正在关闭数据库连接
+2018-12-17 08:55:33,636 htmlreporter.py[line: 37] INFO: 正在查询测试用例总数
+2018-12-17 08:55:33,636 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE executed_history_id = %s  data：('20181217085429',)
+2018-12-17 08:55:33,638 htmlreporter.py[line: 37] INFO: 正在查询测试用例总数
+2018-12-17 08:55:33,638 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE executed_history_id = %s  data：('20181217085429',)
+2018-12-17 08:55:33,661 htmlreporter.py[line: 43] INFO: 正在查询执行通过的用例数
+2018-12-17 08:55:33,661 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Pass', '20181217085429')
+2018-12-17 08:55:33,662 htmlreporter.py[line: 49] INFO: 正在查询执行失败的用例数
+2018-12-17 08:55:33,662 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Fail', '20181217085429')
+2018-12-17 08:55:33,662 htmlreporter.py[line: 43] INFO: 正在查询执行通过的用例数
+2018-12-17 08:55:33,662 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Pass', '20181217085429')
+2018-12-17 08:55:33,663 htmlreporter.py[line: 49] INFO: 正在查询执行失败的用例数
+2018-12-17 08:55:33,663 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Fail', '20181217085429')
+2018-12-17 08:55:33,664 htmlreporter.py[line: 55] INFO: 正在查询执行出错的用例数
+2018-12-17 08:55:33,664 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Error', '20181217085429')
+2018-12-17 08:55:33,665 htmlreporter.py[line: 61] INFO: 正在查询未执行的用例数
+2018-12-17 08:55:33,665 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Block', '20181217085429')
+2018-12-17 08:55:33,666 htmlreporter.py[line: 87] INFO: 正在查询已运的测试计划
+2018-12-17 08:55:33,666 mydb.py[line: 104] INFO: query：SELECT project, testplan FROM testcase_report_tb WHERE executed_history_id = %s GROUP BY project, testplan ORDER BY id ASC  data：('20181217085429',)
+2018-12-17 08:55:33,668 htmlreporter.py[line: 113] INFO: 正在查询测试计划[project：LGEOC, testplan：111]的测试用例执行结果
+2018-12-17 08:55:33,669 mydb.py[line: 104] INFO: query：SELECT id, executed_history_id, testcase_id, testcase_name,testsuit, testplan, project, runresult, runtime FROM testcase_report_tb WHERE project=%s AND testplan=%s AND executed_history_id = %s GROUP BY testcase_id ORDER BY id ASC  data：('LGEOC', '111', '20181217085429')
+2018-12-17 08:55:33,669 htmlreporter.py[line: 120] INFO: 正在记录测试测试计划[project：LGEOC, testplan：111]的测试用例运行结果到测试报告
+2018-12-17 08:55:33,670 htmlreporter.py[line: 134] INFO: 正在查询已运的测试计划
+2018-12-17 08:55:33,670 mydb.py[line: 104] INFO: query：SELECT project, testplan FROM testcase_report_tb WHERE executed_history_id = %s GROUP BY project, testplan ORDER BY id ASC  data：('20181217085429',)
+2018-12-17 08:55:33,671 htmlreporter.py[line: 146] INFO: 正在查询测试计划[project：LGEOC, testplan：111]已运行的测试用例
+2018-12-17 08:55:33,671 mydb.py[line: 104] INFO: query：SELECT testcase_id, testcase_name, project, testplan FROM testcase_report_tb WHERE project=%s AND testplan=%s AND executed_history_id = %s  GROUP BY testcase_id ORDER BY id ASC  data：('LGEOC', '111', '20181217085429')
+2018-12-17 08:55:33,673 htmlreporter.py[line: 177] INFO: 正在查询测试用例[id=4]步骤运行结果
+2018-12-17 08:55:33,673 mydb.py[line: 104] INFO: query：SELECT step_id, step_num, protocol_method, protocol, HOST, PORT, step_action, expected_results, runresult, reason, runtime FROM case_step_report_tb WHERE project= %s AND testplan= %s AND testcase_id = %s AND executed_history_id = %s GROUP BY step_num ORDER BY step_num ASC  data：('LGEOC', '111', 4, '20181217085429')
+2018-12-17 08:55:33,674 htmlreporter.py[line: 199] INFO: 正在设置测试报告结果文件名
+2018-12-17 08:55:33,674 htmlreporter.py[line: 209] INFO: 测试报告文件名所在路径为：./test_report20181217085429.html
+2018-12-17 08:55:33,675 htmlreporter.py[line: 202] INFO: 正在生成测试报告
+2018-12-17 08:55:33,680 htmlreporter.py[line: 55] INFO: 正在查询执行出错的用例数
+2018-12-17 08:55:33,680 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Error', '20181217085429')
+2018-12-17 08:55:33,681 htmlreporter.py[line: 61] INFO: 正在查询未执行的用例数
+2018-12-17 08:55:33,681 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Block', '20181217085429')
+2018-12-17 08:55:33,682 htmlreporter.py[line: 87] INFO: 正在查询已运的测试计划
+2018-12-17 08:55:33,682 mydb.py[line: 104] INFO: query：SELECT project, testplan FROM testcase_report_tb WHERE executed_history_id = %s GROUP BY project, testplan ORDER BY id ASC  data：('20181217085429',)
+2018-12-17 08:55:33,722 htmlreporter.py[line: 113] INFO: 正在查询测试计划[project：LGEOC, testplan：111]的测试用例执行结果
+2018-12-17 08:55:33,723 mydb.py[line: 104] INFO: query：SELECT id, executed_history_id, testcase_id, testcase_name,testsuit, testplan, project, runresult, runtime FROM testcase_report_tb WHERE project=%s AND testplan=%s AND executed_history_id = %s GROUP BY testcase_id ORDER BY id ASC  data：('LGEOC', '111', '20181217085429')
+2018-12-17 08:55:33,728 htmlreporter.py[line: 120] INFO: 正在记录测试测试计划[project：LGEOC, testplan：111]的测试用例运行结果到测试报告
+2018-12-17 08:55:33,729 htmlreporter.py[line: 134] INFO: 正在查询已运的测试计划
+2018-12-17 08:55:33,729 mydb.py[line: 104] INFO: query：SELECT project, testplan FROM testcase_report_tb WHERE executed_history_id = %s GROUP BY project, testplan ORDER BY id ASC  data：('20181217085429',)
+2018-12-17 08:55:33,729 htmlreporter.py[line: 146] INFO: 正在查询测试计划[project：LGEOC, testplan：111]已运行的测试用例
+2018-12-17 08:55:33,729 mydb.py[line: 104] INFO: query：SELECT testcase_id, testcase_name, project, testplan FROM testcase_report_tb WHERE project=%s AND testplan=%s AND executed_history_id = %s  GROUP BY testcase_id ORDER BY id ASC  data：('LGEOC', '111', '20181217085429')
+2018-12-17 08:55:33,730 htmlreporter.py[line: 177] INFO: 正在查询测试用例[id=4]步骤运行结果
+2018-12-17 08:55:33,730 mydb.py[line: 104] INFO: query：SELECT step_id, step_num, protocol_method, protocol, HOST, PORT, step_action, expected_results, runresult, reason, runtime FROM case_step_report_tb WHERE project= %s AND testplan= %s AND testcase_id = %s AND executed_history_id = %s GROUP BY step_num ORDER BY step_num ASC  data：('LGEOC', '111', 4, '20181217085429')
+2018-12-17 08:55:33,732 htmlreporter.py[line: 199] INFO: 正在设置测试报告结果文件名
+2018-12-17 08:55:33,732 htmlreporter.py[line: 209] INFO: 测试报告文件名所在路径为：./test_report20181217085429.html
+2018-12-17 08:55:33,732 htmlreporter.py[line: 202] INFO: 正在生成测试报告
+2018-12-17 08:55:33,859 main.py[line: 278] INFO: 生成测试报告成功
+2018-12-17 08:55:33,865 main.py[line: 278] INFO: 生成测试报告成功
+2018-12-17 08:59:45,384 main.py[line: 14] INFO: sion::当前运行路径：/home/fengguo/PycharmProjects/autoplatform_dev
+2018-12-17 08:59:45,826 global_var.py[line: 26] INFO: 当前运行环境：测试环境
+2018-12-17 08:59:45,826 global_var.py[line: 27] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 09:00:57,442 main.py[line: 14] INFO: sion::当前运行路径：/home/fengguo/PycharmProjects/autoplatform_dev
+2018-12-17 09:00:57,530 global_var.py[line: 26] INFO: 当前运行环境：测试环境
+2018-12-17 09:00:57,530 global_var.py[line: 27] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 09:00:57,590 global_var.py[line: 34] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 09:00:57,591 global_var.py[line: 37] INFO: 正在获取testlink
+2018-12-17 09:00:58,211 main.py[line: 67] INFO: 正在创建测试用例报告报表
+2018-12-17 09:00:58,211 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS testcase_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testsuit varchar(40),                                          testplan varchar(40),                                          project varchar(40),                                          runresult varchar(20),                                          runtime datetime)
+2018-12-17 09:00:58,236 main.py[line: 70] INFO: 正在创建测试步骤报告报表
+2018-12-17 09:00:58,236 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS case_step_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testplan varchar(40) NOT NULL,                                          project varchar(40) NOT NULL,                                          step_id int,                                          step_num int NOT NULL,                                          step_action varchar(1000),                                           expected_results varchar(1000),                                          runresult varchar(10),                                          reason varchar(2000),                                          protocol_method varchar(40) ,                                          protocol varchar(40),                                          host varchar(40),                                          port int,                                          runtime datetime)
+2018-12-17 09:00:58,237 main.py[line: 72] INFO: sys.path: ['/home/fengguo/PycharmProjects/autoplatform_dev', '/home/fengguo/PycharmProjects/autoplatform_dev', '/usr/local/lib/python36.zip', '/usr/local/lib/python3.6', '/usr/local/lib/python3.6/lib-dynload', '/home/fengguo/.local/lib/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages']
+2018-12-17 09:00:58,237 main.py[line: 73] INFO: 正在读取运行模式配置
+2018-12-17 09:00:58,249 main.py[line: 80] INFO: 正在运行全局初始化用例……
+2018-12-17 09:00:58,249 main.py[line: 82] INFO: 待运行全局初始化用例id列表：[]
+2018-12-17 09:00:58,249 main.py[line: 88] INFO: 按项目运行测试
+2018-12-17 09:00:58,249 main.py[line: 125] INFO: 运行指定项目
+2018-12-17 09:00:58,398 main.py[line: 141] INFO: 正在读取测项目[id：1, project：LGEOC]的协议，host，端口配置...
+2018-12-17 09:00:58,398 main.py[line: 144] INFO: 成功读取配置信息：{"protocol":"http","host":"192.168.202.112/sso","port":"80"}
+2018-12-17 09:00:58,401 main.py[line: 160] INFO: 正在执行测试项目[id：1, project：LGEOC]
+2018-12-17 09:00:58,401 testproject.py[line: 23] INFO: 正在获取测试项目[id：1, name：LGEOC]对应对应的测试计划名称列表
+2018-12-17 09:00:58,544 testproject.py[line: 28] INFO: 成功获取项目测试计划名称列表[list=['111']]
+2018-12-17 09:00:58,641 testproject.py[line: 38] INFO: 正在执行项目测试计划[project：LGEOC，testplan：111]
+2018-12-17 09:00:58,641 testplan.py[line: 29] INFO: 正在获取测试计划[project=LGEOC，name=111]的测试用例
+2018-12-17 09:00:58,742 testplan.py[line: 35] INFO: 成功获取测试计划[project=LGEOC，name=111]的测试用例id：dict_keys(['4'])
+2018-12-17 09:00:58,857 testplan.py[line: 44] INFO: 获取测试用例信息 [{'updater_login': 'admin', 'author_login': 'sunwei', 'name': 'test1', 'node_order': '1000', 'testsuite_id': '3', 'testcase_id': '4', 'id': '5', 'tc_external_id': '1', 'version': '1', 'layout': '1', 'status': '1', 'summary': '<p>test_Login*.py</p>\n', 'preconditions': '', 'importance': '2', 'author_id': '3', 'creation_ts': '2018-07-03 05:31:15', 'updater_id': '1', 'modification_ts': '2018-10-10 10:21:05', 'active': '1', 'is_open': '1', 'execution_type': '1', 'estimated_exec_duration': '', 'author_first_name': 'wei', 'author_last_name': 'sun', 'updater_first_name': 'Testlink', 'updater_last_name': 'Administrator', 'steps': [{'id': '6', 'step_number': '1', 'actions': '<p>{</p>\n\n<p>&quot;111&quot;:&quot;test&quot;</p>\n\n<p>}</p>\n', 'expected_results': '', 'active': '1', 'execution_type': '1'}], 'full_tc_external_id': 'LGEOC-1'}]
+2018-12-17 09:00:58,858 testplan.py[line: 52] INFO: test case summary: test_Login*.py
+2018-12-17 09:00:58,957 testplan.py[line: 72] INFO: 记录测试用例到测试用例报表
+2018-12-17 09:00:58,957 mydb.py[line: 57] INFO: query：INSERT INTO testcase_report_tb(executed_history_id, testcase_id, testcase_name, testsuit, testplan, project, runresult, runtime) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)  data：('20181217090057', 4, 'test1', 'testSuite', '111', 'LGEOC', 'Block', '2018/07/08 08:00:00')
+2018-12-17 09:00:58,958 testplan.py[line: 75] INFO: 开始执行测试用例[id=4，name=test1]
+2018-12-17 09:00:58,958 testcase.py[line: 37] INFO: sion:Will find test cases: test_Login*.py
+2018-12-17 09:00:58,960 testcase.py[line: 41] INFO: sion:discover testcases number:::3
+2018-12-17 09:00:58,960 testcase.py[line: 45] INFO: sion:steps
+2018-12-17 09:00:58,960 testcase.py[line: 46] INFO: sion:start selenium test cases
+2018-12-17 09:00:58,960 testcase.py[line: 49] INFO: start BSTestRunner
+2018-12-17 09:01:26,076 testplan.py[line: 80] INFO: 正在更新用例执行结果
+2018-12-17 09:01:26,956 testplan.py[line: 100] INFO: 测试计划[project=LGEOC ,testplan=111]已执行完
+2018-12-17 09:01:27,061 main.py[line: 131] ERROR: 测试项目[project：pj_pos]获取失败，暂时无法执行：7011: Test Project (name:pj_pos) does not exist.
+getTestProjectByName({'devKey': '0b839ca6b6a4d8b78139e5f5f93c38f1', 'testprojectname': 'pj_pos'})
+2018-12-17 09:01:27,061 main.py[line: 253] INFO: 接口测试已执行完成，正在关闭数据库连接
+2018-12-17 09:01:27,070 htmlreporter.py[line: 37] INFO: 正在查询测试用例总数
+2018-12-17 09:01:27,070 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE executed_history_id = %s  data：('20181217090057',)
+2018-12-17 09:01:27,082 htmlreporter.py[line: 43] INFO: 正在查询执行通过的用例数
+2018-12-17 09:01:27,082 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Pass', '20181217090057')
+2018-12-17 09:01:27,083 htmlreporter.py[line: 49] INFO: 正在查询执行失败的用例数
+2018-12-17 09:01:27,083 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Fail', '20181217090057')
+2018-12-17 09:01:27,083 htmlreporter.py[line: 55] INFO: 正在查询执行出错的用例数
+2018-12-17 09:01:27,083 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Error', '20181217090057')
+2018-12-17 09:01:27,084 htmlreporter.py[line: 61] INFO: 正在查询未执行的用例数
+2018-12-17 09:01:27,084 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Block', '20181217090057')
+2018-12-17 09:01:27,084 htmlreporter.py[line: 87] INFO: 正在查询已运的测试计划
+2018-12-17 09:01:27,085 mydb.py[line: 104] INFO: query：SELECT project, testplan FROM testcase_report_tb WHERE executed_history_id = %s GROUP BY project, testplan ORDER BY id ASC  data：('20181217090057',)
+2018-12-17 09:01:27,085 htmlreporter.py[line: 113] INFO: 正在查询测试计划[project：LGEOC, testplan：111]的测试用例执行结果
+2018-12-17 09:01:27,086 mydb.py[line: 104] INFO: query：SELECT id, executed_history_id, testcase_id, testcase_name,testsuit, testplan, project, runresult, runtime FROM testcase_report_tb WHERE project=%s AND testplan=%s AND executed_history_id = %s GROUP BY testcase_id ORDER BY id ASC  data：('LGEOC', '111', '20181217090057')
+2018-12-17 09:01:27,086 htmlreporter.py[line: 120] INFO: 正在记录测试测试计划[project：LGEOC, testplan：111]的测试用例运行结果到测试报告
+2018-12-17 09:01:27,087 htmlreporter.py[line: 134] INFO: 正在查询已运的测试计划
+2018-12-17 09:01:27,087 mydb.py[line: 104] INFO: query：SELECT project, testplan FROM testcase_report_tb WHERE executed_history_id = %s GROUP BY project, testplan ORDER BY id ASC  data：('20181217090057',)
+2018-12-17 09:01:27,087 htmlreporter.py[line: 146] INFO: 正在查询测试计划[project：LGEOC, testplan：111]已运行的测试用例
+2018-12-17 09:01:27,087 mydb.py[line: 104] INFO: query：SELECT testcase_id, testcase_name, project, testplan FROM testcase_report_tb WHERE project=%s AND testplan=%s AND executed_history_id = %s  GROUP BY testcase_id ORDER BY id ASC  data：('LGEOC', '111', '20181217090057')
+2018-12-17 09:01:27,088 htmlreporter.py[line: 177] INFO: 正在查询测试用例[id=4]步骤运行结果
+2018-12-17 09:01:27,088 mydb.py[line: 104] INFO: query：SELECT step_id, step_num, protocol_method, protocol, HOST, PORT, step_action, expected_results, runresult, reason, runtime FROM case_step_report_tb WHERE project= %s AND testplan= %s AND testcase_id = %s AND executed_history_id = %s GROUP BY step_num ORDER BY step_num ASC  data：('LGEOC', '111', 4, '20181217090057')
+2018-12-17 09:01:27,089 htmlreporter.py[line: 199] INFO: 正在设置测试报告结果文件名
+2018-12-17 09:01:27,089 htmlreporter.py[line: 209] INFO: 测试报告文件名所在路径为：./test_report20181217090057.html
+2018-12-17 09:01:27,089 htmlreporter.py[line: 202] INFO: 正在生成测试报告
+2018-12-17 09:01:27,166 main.py[line: 278] INFO: 生成测试报告成功
+2018-12-17 09:08:18,017 global_var.py[line: 25] INFO: 当前运行环境：测试环境
+2018-12-17 09:08:18,017 global_var.py[line: 26] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 09:08:18,041 global_var.py[line: 33] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 09:08:18,043 global_var.py[line: 36] INFO: 正在获取testlink
+2018-12-17 09:08:18,485 main.py[line: 66] INFO: 正在创建测试用例报告报表
+2018-12-17 09:08:18,486 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS testcase_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testsuit varchar(40),                                          testplan varchar(40),                                          project varchar(40),                                          runresult varchar(20),                                          runtime datetime)
+2018-12-17 09:08:18,513 main.py[line: 69] INFO: 正在创建测试步骤报告报表
+2018-12-17 09:08:18,514 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS case_step_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testplan varchar(40) NOT NULL,                                          project varchar(40) NOT NULL,                                          step_id int,                                          step_num int NOT NULL,                                          step_action varchar(1000),                                           expected_results varchar(1000),                                          runresult varchar(10),                                          reason varchar(2000),                                          protocol_method varchar(40) ,                                          protocol varchar(40),                                          host varchar(40),                                          port int,                                          runtime datetime)
+2018-12-17 09:08:18,514 main.py[line: 72] INFO: 正在读取运行模式配置
+2018-12-17 09:08:18,530 main.py[line: 79] INFO: 正在运行全局初始化用例……
+2018-12-17 09:08:18,531 main.py[line: 81] INFO: 待运行全局初始化用例id列表：[]
+2018-12-17 09:08:18,531 main.py[line: 87] INFO: 按项目运行测试
+2018-12-17 09:08:18,531 main.py[line: 124] INFO: 运行指定项目
+2018-12-17 09:08:19,033 main.py[line: 140] INFO: 正在读取测项目[id：1, project：LGEOC]的协议，host，端口配置...
+2018-12-17 09:08:19,034 main.py[line: 143] INFO: 成功读取配置信息：{"protocol":"http","host":"192.168.202.112/sso","port":"80"}
+2018-12-17 09:08:19,036 main.py[line: 159] INFO: 正在执行测试项目[id：1, project：LGEOC]
+2018-12-17 09:08:19,036 testproject.py[line: 23] INFO: 正在获取测试项目[id：1, name：LGEOC]对应对应的测试计划名称列表
+2018-12-17 09:08:19,135 testproject.py[line: 28] INFO: 成功获取项目测试计划名称列表[list=['111']]
+2018-12-17 09:08:19,237 testproject.py[line: 38] INFO: 正在执行项目测试计划[project：LGEOC，testplan：111]
+2018-12-17 09:08:19,237 testplan.py[line: 29] INFO: 正在获取测试计划[project=LGEOC，name=111]的测试用例
+2018-12-17 09:08:19,359 testplan.py[line: 35] INFO: 成功获取测试计划[project=LGEOC，name=111]的测试用例id：dict_keys(['4'])
+2018-12-17 09:08:19,476 testplan.py[line: 44] INFO: 获取测试用例信息 [{'updater_login': 'admin', 'author_login': 'sunwei', 'name': 'test1', 'node_order': '1000', 'testsuite_id': '3', 'testcase_id': '4', 'id': '5', 'tc_external_id': '1', 'version': '1', 'layout': '1', 'status': '1', 'summary': '<p>test_Login*.py</p>\n', 'preconditions': '', 'importance': '2', 'author_id': '3', 'creation_ts': '2018-07-03 05:31:15', 'updater_id': '1', 'modification_ts': '2018-10-10 10:21:05', 'active': '1', 'is_open': '1', 'execution_type': '1', 'estimated_exec_duration': '', 'author_first_name': 'wei', 'author_last_name': 'sun', 'updater_first_name': 'Testlink', 'updater_last_name': 'Administrator', 'steps': [{'id': '6', 'step_number': '1', 'actions': '<p>{</p>\n\n<p>&quot;111&quot;:&quot;test&quot;</p>\n\n<p>}</p>\n', 'expected_results': '', 'active': '1', 'execution_type': '1'}], 'full_tc_external_id': 'LGEOC-1'}]
+2018-12-17 09:08:19,476 testplan.py[line: 52] INFO: test case summary: test_Login*.py
+2018-12-17 09:08:19,580 testplan.py[line: 72] INFO: 记录测试用例到测试用例报表
+2018-12-17 09:08:19,580 mydb.py[line: 57] INFO: query：INSERT INTO testcase_report_tb(executed_history_id, testcase_id, testcase_name, testsuit, testplan, project, runresult, runtime) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)  data：('20181217090818', 4, 'test1', 'testSuite', '111', 'LGEOC', 'Block', '2018/07/08 08:00:00')
+2018-12-17 09:08:19,581 testplan.py[line: 75] INFO: 开始执行测试用例[id=4，name=test1]
+2018-12-17 09:08:19,582 testcase.py[line: 37] INFO: sion:Will find test cases: test_Login*.py
+2018-12-17 09:08:19,583 testcase.py[line: 41] INFO: sion:discover testcases number:::3
+2018-12-17 09:08:19,583 testcase.py[line: 45] INFO: sion:steps
+2018-12-17 09:08:19,583 testcase.py[line: 46] INFO: sion:start selenium test cases
+2018-12-17 09:08:19,583 testcase.py[line: 49] INFO: start BSTestRunner
+2018-12-17 09:14:28,286 global_var.py[line: 25] INFO: 当前运行环境：测试环境
+2018-12-17 09:14:28,294 global_var.py[line: 26] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 09:14:28,384 global_var.py[line: 33] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 09:14:28,387 global_var.py[line: 36] INFO: 正在获取testlink
+2018-12-17 09:14:28,817 main.py[line: 66] INFO: 正在创建测试用例报告报表
+2018-12-17 09:14:28,817 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS testcase_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testsuit varchar(40),                                          testplan varchar(40),                                          project varchar(40),                                          runresult varchar(20),                                          runtime datetime)
+2018-12-17 09:14:28,818 main.py[line: 69] INFO: 正在创建测试步骤报告报表
+2018-12-17 09:14:28,818 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS case_step_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testplan varchar(40) NOT NULL,                                          project varchar(40) NOT NULL,                                          step_id int,                                          step_num int NOT NULL,                                          step_action varchar(1000),                                           expected_results varchar(1000),                                          runresult varchar(10),                                          reason varchar(2000),                                          protocol_method varchar(40) ,                                          protocol varchar(40),                                          host varchar(40),                                          port int,                                          runtime datetime)
+2018-12-17 09:14:28,819 main.py[line: 72] INFO: 正在读取运行模式配置
+2018-12-17 09:14:28,824 main.py[line: 79] INFO: 正在运行全局初始化用例……
+2018-12-17 09:14:28,825 main.py[line: 81] INFO: 待运行全局初始化用例id列表：[]
+2018-12-17 09:14:28,825 main.py[line: 87] INFO: 按项目运行测试
+2018-12-17 09:14:28,825 main.py[line: 124] INFO: 运行指定项目
+2018-12-17 09:14:29,084 main.py[line: 140] INFO: 正在读取测项目[id：1, project：LGEOC]的协议，host，端口配置...
+2018-12-17 09:14:29,084 main.py[line: 143] INFO: 成功读取配置信息：{"protocol":"http","host":"192.168.202.112/sso","port":"80"}
+2018-12-17 09:14:29,086 main.py[line: 159] INFO: 正在执行测试项目[id：1, project：LGEOC]
+2018-12-17 09:14:29,086 testproject.py[line: 23] INFO: 正在获取测试项目[id：1, name：LGEOC]对应对应的测试计划名称列表
+2018-12-17 09:14:29,185 testproject.py[line: 28] INFO: 成功获取项目测试计划名称列表[list=['111']]
+2018-12-17 09:14:29,286 testproject.py[line: 38] INFO: 正在执行项目测试计划[project：LGEOC，testplan：111]
+2018-12-17 09:14:29,286 testplan.py[line: 29] INFO: 正在获取测试计划[project=LGEOC，name=111]的测试用例
+2018-12-17 09:14:29,429 testplan.py[line: 35] INFO: 成功获取测试计划[project=LGEOC，name=111]的测试用例id：dict_keys(['4'])
+2018-12-17 09:14:29,543 testplan.py[line: 44] INFO: 获取测试用例信息 [{'updater_login': 'admin', 'author_login': 'sunwei', 'name': 'test1', 'node_order': '1000', 'testsuite_id': '3', 'testcase_id': '4', 'id': '5', 'tc_external_id': '1', 'version': '1', 'layout': '1', 'status': '1', 'summary': '<p>test_Login*.py</p>\n', 'preconditions': '', 'importance': '2', 'author_id': '3', 'creation_ts': '2018-07-03 05:31:15', 'updater_id': '1', 'modification_ts': '2018-10-10 10:21:05', 'active': '1', 'is_open': '1', 'execution_type': '1', 'estimated_exec_duration': '', 'author_first_name': 'wei', 'author_last_name': 'sun', 'updater_first_name': 'Testlink', 'updater_last_name': 'Administrator', 'steps': [{'id': '6', 'step_number': '1', 'actions': '<p>{</p>\n\n<p>&quot;111&quot;:&quot;test&quot;</p>\n\n<p>}</p>\n', 'expected_results': '', 'active': '1', 'execution_type': '1'}], 'full_tc_external_id': 'LGEOC-1'}]
+2018-12-17 09:14:29,543 testplan.py[line: 52] INFO: test case summary: test_Login*.py
+2018-12-17 09:14:29,655 testplan.py[line: 72] INFO: 记录测试用例到测试用例报表
+2018-12-17 09:14:29,655 mydb.py[line: 57] INFO: query：INSERT INTO testcase_report_tb(executed_history_id, testcase_id, testcase_name, testsuit, testplan, project, runresult, runtime) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)  data：('20181217091428', 4, 'test1', 'testSuite', '111', 'LGEOC', 'Block', '2018/07/08 08:00:00')
+2018-12-17 09:14:29,656 testplan.py[line: 75] INFO: 开始执行测试用例[id=4，name=test1]
+2018-12-17 09:14:29,656 testcase.py[line: 38] INFO: sion::Will find test cases: test_Login*.py
+2018-12-17 09:14:29,657 testcase.py[line: 42] INFO: sion:discover testcases number:::3
+2018-12-17 09:14:29,658 testcase.py[line: 46] INFO: sion:steps
+2018-12-17 09:14:29,658 testcase.py[line: 47] INFO: sion:start selenium test cases
+2018-12-17 09:14:29,658 testcase.py[line: 50] INFO: start BSTestRunner
+2018-12-17 09:14:53,200 testplan.py[line: 80] INFO: 正在更新用例执行结果
+2018-12-17 09:14:53,933 testplan.py[line: 100] INFO: 测试计划[project=LGEOC ,testplan=111]已执行完
+2018-12-17 09:14:54,036 main.py[line: 130] ERROR: 测试项目[project：pj_pos]获取失败，暂时无法执行：7011: Test Project (name:pj_pos) does not exist.
+getTestProjectByName({'devKey': '0b839ca6b6a4d8b78139e5f5f93c38f1', 'testprojectname': 'pj_pos'})
+2018-12-17 09:14:54,037 main.py[line: 252] INFO: 接口测试已执行完成，正在关闭数据库连接
+2018-12-17 09:14:54,043 htmlreporter.py[line: 37] INFO: 正在查询测试用例总数
+2018-12-17 09:14:54,044 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE executed_history_id = %s  data：('20181217091428',)
+2018-12-17 09:14:54,055 htmlreporter.py[line: 43] INFO: 正在查询执行通过的用例数
+2018-12-17 09:14:54,055 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Pass', '20181217091428')
+2018-12-17 09:14:54,056 htmlreporter.py[line: 49] INFO: 正在查询执行失败的用例数
+2018-12-17 09:14:54,056 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Fail', '20181217091428')
+2018-12-17 09:14:54,056 htmlreporter.py[line: 55] INFO: 正在查询执行出错的用例数
+2018-12-17 09:14:54,056 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Error', '20181217091428')
+2018-12-17 09:14:54,057 htmlreporter.py[line: 61] INFO: 正在查询未执行的用例数
+2018-12-17 09:14:54,057 mydb.py[line: 87] INFO: query：SELECT count(testcase_id) FROM testcase_report_tb WHERE runresult = %s AND executed_history_id = %s  data：('Block', '20181217091428')
+2018-12-17 09:14:54,057 htmlreporter.py[line: 87] INFO: 正在查询已运的测试计划
+2018-12-17 09:14:54,057 mydb.py[line: 104] INFO: query：SELECT project, testplan FROM testcase_report_tb WHERE executed_history_id = %s GROUP BY project, testplan ORDER BY id ASC  data：('20181217091428',)
+2018-12-17 09:14:54,058 htmlreporter.py[line: 113] INFO: 正在查询测试计划[project：LGEOC, testplan：111]的测试用例执行结果
+2018-12-17 09:14:54,058 mydb.py[line: 104] INFO: query：SELECT id, executed_history_id, testcase_id, testcase_name,testsuit, testplan, project, runresult, runtime FROM testcase_report_tb WHERE project=%s AND testplan=%s AND executed_history_id = %s GROUP BY testcase_id ORDER BY id ASC  data：('LGEOC', '111', '20181217091428')
+2018-12-17 09:14:54,059 htmlreporter.py[line: 120] INFO: 正在记录测试测试计划[project：LGEOC, testplan：111]的测试用例运行结果到测试报告
+2018-12-17 09:14:54,059 htmlreporter.py[line: 134] INFO: 正在查询已运的测试计划
+2018-12-17 09:14:54,060 mydb.py[line: 104] INFO: query：SELECT project, testplan FROM testcase_report_tb WHERE executed_history_id = %s GROUP BY project, testplan ORDER BY id ASC  data：('20181217091428',)
+2018-12-17 09:14:54,060 htmlreporter.py[line: 146] INFO: 正在查询测试计划[project：LGEOC, testplan：111]已运行的测试用例
+2018-12-17 09:14:54,060 mydb.py[line: 104] INFO: query：SELECT testcase_id, testcase_name, project, testplan FROM testcase_report_tb WHERE project=%s AND testplan=%s AND executed_history_id = %s  GROUP BY testcase_id ORDER BY id ASC  data：('LGEOC', '111', '20181217091428')
+2018-12-17 09:14:54,061 htmlreporter.py[line: 177] INFO: 正在查询测试用例[id=4]步骤运行结果
+2018-12-17 09:14:54,061 mydb.py[line: 104] INFO: query：SELECT step_id, step_num, protocol_method, protocol, HOST, PORT, step_action, expected_results, runresult, reason, runtime FROM case_step_report_tb WHERE project= %s AND testplan= %s AND testcase_id = %s AND executed_history_id = %s GROUP BY step_num ORDER BY step_num ASC  data：('LGEOC', '111', 4, '20181217091428')
+2018-12-17 09:14:54,062 htmlreporter.py[line: 199] INFO: 正在设置测试报告结果文件名
+2018-12-17 09:14:54,062 htmlreporter.py[line: 209] INFO: 测试报告文件名所在路径为：./test_report20181217091428.html
+2018-12-17 09:14:54,062 htmlreporter.py[line: 202] INFO: 正在生成测试报告
+2018-12-17 09:14:54,128 main.py[line: 277] INFO: 生成测试报告成功
+2018-12-17 09:43:33,395 global_var.py[line: 25] INFO: 当前运行环境：测试环境
+2018-12-17 09:43:33,395 global_var.py[line: 26] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 09:43:33,486 global_var.py[line: 33] INFO: 正在初始化数据库[名称：TESTDB]对象
+2018-12-17 09:43:33,503 global_var.py[line: 36] INFO: 正在获取testlink
+2018-12-17 09:43:33,914 main.py[line: 66] INFO: 正在创建测试用例报告报表
+2018-12-17 09:43:33,914 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS testcase_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testsuit varchar(40),                                          testplan varchar(40),                                          project varchar(40),                                          runresult varchar(20),                                          runtime datetime)
+2018-12-17 09:43:33,915 main.py[line: 69] INFO: 正在创建测试步骤报告报表
+2018-12-17 09:43:33,915 mydb.py[line: 43] INFO: query：CREATE TABLE IF NOT EXISTS case_step_report_tb                                         (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,                                          executed_history_id varchar(50) NOT NULL,                                          testcase_id int NOT NULL,                                          testcase_name varchar(40) NOT NULL,                                          testplan varchar(40) NOT NULL,                                          project varchar(40) NOT NULL,                                          step_id int,                                          step_num int NOT NULL,                                          step_action varchar(1000),                                           expected_results varchar(1000),                                          runresult varchar(10),                                          reason varchar(2000),                                          protocol_method varchar(40) ,                                          protocol varchar(40),                                          host varchar(40),                                          port int,                                          runtime datetime)
+2018-12-17 09:43:33,916 main.py[line: 72] INFO: 正在读取运行模式配置
+2018-12-17 09:43:33,920 main.py[line: 79] INFO: 正在运行全局初始化用例……
+2018-12-17 09:43:33,920 main.py[line: 81] INFO: 待运行全局初始化用例id列表：[]
+2018-12-17 09:43:33,921 main.py[line: 87] INFO: 按项目运行测试
+2018-12-17 09:43:33,921 main.py[line: 124] INFO: 运行指定项目
+2018-12-17 09:43:34,349 main.py[line: 140] INFO: 正在读取测项目[id：1, project：LGEOC]的协议，host，端口配置...
+2018-12-17 09:43:34,350 main.py[line: 143] INFO: 成功读取配置信息：{"protocol":"http","host":"192.168.202.112/sso","port":"80"}
+2018-12-17 09:43:34,352 main.py[line: 159] INFO: 正在执行测试项目[id：1, project：LGEOC]
+2018-12-17 09:43:34,352 testproject.py[line: 23] INFO: 正在获取测试项目[id：1, name：LGEOC]对应对应的测试计划名称列表
+2018-12-17 09:43:34,450 testproject.py[line: 28] INFO: 成功获取项目测试计划名称列表[list=['111']]
+2018-12-17 09:43:34,549 testproject.py[line: 38] INFO: 正在执行项目测试计划[project：LGEOC，testplan：111]
+2018-12-17 09:43:34,549 testplan.py[line: 29] INFO: 正在获取测试计划[project=LGEOC，name=111]的测试用例
+2018-12-17 09:43:34,656 testplan.py[line: 35] INFO: 成功获取测试计划[project=LGEOC，name=111]的测试用例id：dict_keys(['4'])
+2018-12-17 09:43:34,755 testplan.py[line: 44] INFO: 获取测试用例信息 [{'updater_login': 'admin', 'author_login': 'sunwei', 'name': 'test1', 'node_order': '1000', 'testsuite_id': '3', 'testcase_id': '4', 'id': '5', 'tc_external_id': '1', 'version': '1', 'layout': '1', 'status': '1', 'summary': '<p>test_Login*.py</p>\n', 'preconditions': '', 'importance': '2', 'author_id': '3', 'creation_ts': '2018-07-03 05:31:15', 'updater_id': '1', 'modification_ts': '2018-10-10 10:21:05', 'active': '1', 'is_open': '1', 'execution_type': '1', 'estimated_exec_duration': '', 'author_first_name': 'wei', 'author_last_name': 'sun', 'updater_first_name': 'Testlink', 'updater_last_name': 'Administrator', 'steps': [{'id': '6', 'step_number': '1', 'actions': '<p>{</p>\n\n<p>&quot;111&quot;:&quot;test&quot;</p>\n\n<p>}</p>\n', 'expected_results': '', 'active': '1', 'execution_type': '1'}], 'full_tc_external_id': 'LGEOC-1'}]
+2018-12-17 09:43:34,755 testplan.py[line: 52] INFO: test case summary: test_Login*.py
+2018-12-17 09:43:34,853 testplan.py[line: 72] INFO: 记录测试用例到测试用例报表
+2018-12-17 09:43:34,853 mydb.py[line: 57] INFO: query：INSERT INTO testcase_report_tb(executed_history_id, testcase_id, testcase_name, testsuit, testplan, project, runresult, runtime) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)  data：('20181217094333', 4, 'test1', 'testSuite', '111', 'LGEOC', 'Block', '2018/07/08 08:00:00')
+2018-12-17 09:43:34,862 testplan.py[line: 75] INFO: 开始执行测试用例[id=4，name=test1]
+2018-12-17 09:43:34,863 testcase.py[line: 38] INFO: sion::Will find test cases: test_Login*.py
+2018-12-17 09:43:34,864 testcase.py[line: 42] INFO: sion:discover testcases number:::3
+2018-12-17 09:43:34,864 testcase.py[line: 46] INFO: sion:steps
+2018-12-17 09:43:34,864 testcase.py[line: 47] INFO: sion:start selenium test cases
+2018-12-17 09:43:34,864 testcase.py[line: 50] INFO: start BSTestRunner
