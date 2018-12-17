@@ -43,8 +43,8 @@ class TestCase:
         report_dir = platform_dir + '/testreport'
         now = time.strftime("%Y-%m-%d_%H_%M_%S")
         report_name = report_dir + '/' + self.testproject + '_' + self.testplan + '_' + self.testcase_name + '_' + now + '_' + 'result.html'
-        logger.info('sion:steps' % self.steps)
-        logger.info('sion:start selenium test cases')
+        logger.info('sion::steps' % self.steps)
+        logger.info('sion::start selenium test cases')
         with open(report_name, 'wb') as f:
             runner = BSTestRunner(stream=f, title="Test report", description="Test run result")
             logger.info('start BSTestRunner')
